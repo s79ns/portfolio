@@ -1,0 +1,29 @@
+.header
+  = render partial: "toggleswitch"
+  %a HOME
+  %a ABOUT
+  %a SKILLS
+  %a WORKS
+  %a CONTACT
+.container-top
+  .container-top__text
+    %p.top Baby Steps
+    %p.center Creaive
+    %p Programmer / Engineer
+.container-profile
+  .container-profile__left
+  .container-profile__right
+    %p.top About Me
+    %p 関根 直樹
+    %p 1986年生まれ 北海道釧路市出身
+    %p キャッシュレスと投資と健康を追求し尽くす
+    %p 新しいことに挑戦し続け発信と進化を続ける自称エンジニア
+    .sns
+      %a(href="https://github.com/s79ns" target="_blank" rel="noopener noreferrer")
+        %i.fab.fa-github
+      %a.qiita(href="https://qiita.com/s79ns" target="_blank" rel="noopener noreferrer")
+        %i.fas.fa-search
+      %a.twitter(href="https://twitter.com/manjuu_babystep" target="_blank" rel="noopener noreferrer")
+        %i.fab.fa-twitter
+
+= javascript_pack_tag 'darkmode'
