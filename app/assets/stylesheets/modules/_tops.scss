@@ -18,6 +18,10 @@ a:hover {
   margin: 0.5rem 0 2rem 0;
 }
 
+p.top {
+  font-size: 2rem;
+}
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -50,9 +54,6 @@ a:hover {
     text-align: center;
     letter-spacing: 3px;
     color: #fff;
-    p.top {
-      font-size: 2rem;
-    }
     p.center {
       padding: 0.5rem 0;
     }
@@ -74,9 +75,6 @@ a:hover {
     width: 300px;
   }
   &__right {
-    p.top {
-      font-size: 2rem;
-    }
     p.bottom {
       padding-bottom: 1rem;
     }
@@ -91,6 +89,62 @@ a:hover {
       }
       a:hover {
         opacity: 0.8;
+      }
+    }
+  }
+}
+.container-skill {
+  height: 650px;
+  padding: 2rem 3rem;
+  background-image: url("image03.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  p.top {
+    color: #fff;
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .header-line {
+    width: 3%;
+    margin: 1rem auto 3rem;
+  }
+  .language {
+    display: flex;
+    &__block {
+      width: 20%;
+      padding: 1rem;
+      p.top.small {
+        font-size: 1.5rem;
+        padding: 0 0 1rem;
+      }
+      p.padding {
+        font-size: 0.875rem;
+        color: #fff;
+        line-height: 25px;
+      }
+      .picture {
+        height: 200px;
+        width: 80%;
+        margin: 2rem auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .picture.html5css3 {
+        background-image: url("html5css3.jpg");
+      }
+      .picture.ruby {
+        background-image: url("ruby.png");
+      }
+      .picture.rails {
+        background-image: url("rails_logo.png");
+      }
+      .picture.sass {
+        background-image: url("sass.png");
+      }
+      .picture.mysql {
+        background-image: url("mysql.png");
       }
     }
   }
