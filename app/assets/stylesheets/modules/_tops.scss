@@ -11,6 +11,13 @@ a:hover {
   cursor: pointer;
 }
 
+.header-line {
+  border: 3px solid #de5a18;
+  border-radius: 2px;
+  width: 10%;
+  margin: 0.5rem 0 2rem 0;
+}
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -36,14 +43,15 @@ a:hover {
   background-image: url("image01.jpeg");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   &__text {
     text-align: center;
     letter-spacing: 3px;
+    color: #fff;
     p.top {
-      color: #fff;
       font-size: 2rem;
     }
     p.center {
@@ -70,7 +78,7 @@ a:hover {
     p.top {
       font-size: 2rem;
     }
-    p {
+    p.bottom {
       padding-bottom: 1rem;
     }
     .sns {

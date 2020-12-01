@@ -6,7 +6,7 @@
   height: 100%;
   z-index: 5;
   opacity: 0;
-  cursor: pointer;
+  pointer-events: none;
 }
 .toggle-switch {
   position: relative;
