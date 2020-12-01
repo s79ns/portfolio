@@ -33,8 +33,7 @@ a:hover {
     padding: 1rem;
   }
   a:hover {
-    background-color: #eee;
-    opacity: 0.7;
+    background-color: rgba($color: #ddd, $alpha: 0.8);
     transition: 0.3s;
   }
 }
