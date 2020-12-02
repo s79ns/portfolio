@@ -1,0 +1,164 @@
+.game-wrapper {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ddd;
+  border-radius: 5px;
+  max-width: 1000px;
+  width: 100%;
+  &__section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    &__enemy {
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+    .hpGauge {
+      border: 1px solid #777;
+      margin-top: 10px;
+      &__value {
+        height: 15px;
+        background-color: #6bf;
+        transition: 0.3s;
+        width: 100%; //hpが100%だとtransitionの対象外になるので、widthを付与する
+      }
+    }
+    .hp {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+    }
+    .hp > div:first-of-type::after {
+      content: "/";
+      // hp隣の一番最初のdivタグに対して/をつける
+      margin: 0 5px;
+    }
+    &__player {
+      .killedNumbers {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .killedNumbers > div:first-of-type::after {
+        content: "/";
+        margin: 0 5px;
+      }
+      .logs {
+        border: 1px solid #777;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: 1.8;
+        height: 250px;
+        overflow: auto;
+        box-shadow: 0 0 3px 0 #777 inset; // inset 影を内側に指定することができる
+      }
+      .attack {
+        margin: 50px auto 0;
+        width: 200px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f44;
+        color: #fff;
+        border: 0;
+        outline: none;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .attack.deactive {
+        pointer-events: none; //押せなくする
+        opacity: 0.5;
+      }
+    }
+  }
+  &__line {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+.gamemask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.gamemodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  min-width: 500px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.gamemodaltitle {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+.modalNextButton {
+  margin: 50px auto 0;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #28f;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modalCloseButton {
+  margin: 50px auto 0;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #28f;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gamemask.active {
+  opacity: 0.7;
+  visibility: visible;
+}
+
+.gamemodal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalNextButton.hidden {
+  display: none;
+}
+
+.modalCloseButton.hidden {
+  display: none;
+}

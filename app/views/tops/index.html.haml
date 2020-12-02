@@ -60,10 +60,15 @@
   %p.bottom 過去制作した作品の一部をご紹介します。
   .work
     .work__left
-      .isara
+      %a.isara{href:"#"}
+        .mask
+          %h4.small 模写作品：isara
+          %h4 クリックするとプレビューを確認できます
     .work__right
       %p.middle 模写作品 isara
-      %p.up フリーランスのマナブさんが運営するサイトで、多くのエンジニアの方に模写を推奨されています。
+      %p.up.inline
+        %a.color(href="https://isara.life/" target="_blank" rel="noopener noreferrer") フリーランスのマナブさんが運営するサイト
+        %p.inline で、多くのエンジニアの方に模写を推奨されています。
       %p.up 他に手がけた模写作品は以下の通りです。
   .work
     .work__left
@@ -71,6 +76,8 @@
       %p.reverse.up JavaScriptを学習する過程で制作した戦闘ゲームです。
       %p.reverse.up バトルログ履歴・連戦・クリティカル有りの涙なしでは語れない物語？
     .work__right
-      .tenkue
+      %a.tenkue{href: games_index_path}
+        .mask
+          %h4 てんしょくクエストのページに移動します
 
 = javascript_pack_tag 'darkmode'

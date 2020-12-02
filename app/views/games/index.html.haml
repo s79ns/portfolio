@@ -1,0 +1,34 @@
+%p てんしょくクエストv1.0.0
+%br
+.game-wrapper
+  .game-wrapper__section
+    .game-wrapper__section__enemy
+      %h2#enemyName
+      .hpGauge
+        .hpGauge__value#currentEnemyHpGaugeValue
+      .hp
+        #currentEnemyHp
+        #EnemyHp
+    .game-wrapper__line
+      VS
+    .game-wrapper__section__player
+      %h2#playerName
+      .hpGauge
+        .hpGauge__value#currentPlayerHpGaugeValue
+      .hp
+        #currentPlayerHp
+        #PlayerHp
+      .playerStatus
+        .killedNumbers
+          討伐数:
+          #nowkilledNumber
+          #targetkillsNumber
+      %ul#logs.logs
+      %button#attack.attack 攻撃する
+.gamemask#gamemask
+.gamemodal#gamemodal
+  %h2.gamemodaltitle#modalTitle
+  %a.modalNextButton#modalNextButton To be continued...
+  %a.modalCloseButton#modalCloseButton 閉じる
+
+= javascript_pack_tag 'games'
