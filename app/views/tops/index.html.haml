@@ -60,12 +60,15 @@
   %p.bottom 過去制作した作品の一部をご紹介します。
   .work
     .work__left
-      %a.isara{href:"#"}
-        .mask
+      %a.isara
+        .mask#modalOpen
           %h4.small 模写作品：isara
           %h4 クリックするとプレビューを確認できます
+      .modal#modal
+        = image_tag src="isara_full.png",class:"modal-full-isara"
+        %a.modalClose#modalClose ×
     .work__right
-      %p.middle 模写作品 isara
+      %p.middle 模写作品：isara
       %p.up.inline
         %a.color(href="https://isara.life/" target="_blank" rel="noopener noreferrer") フリーランスのマナブさんが運営するサイト
         %p.inline で、多くのエンジニアの方に模写を推奨されています。
@@ -79,5 +82,7 @@
       %a.tenkue{href: games_index_path}
         .mask
           %h4 てんしょくクエストのページに移動します
+.modalmask#modalmask
 
 = javascript_pack_tag 'darkmode'
+= javascript_pack_tag 'modal'

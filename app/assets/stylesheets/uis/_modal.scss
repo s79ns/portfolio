@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  z-index: 11;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  a.modalClose {
+    position: absolute;
+    top: 0%;
+    right: -650%;
+    font-size: 3rem;
+    color: #fff;
+    opacity: 0.7;
+  }
+  a.modalClose:hover {
+    opacity: 1;
+    transition: 0.3s;
+  }
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalmask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.modalmask.active {
+  opacity: 0.7;
+  visibility: visible;
+}
