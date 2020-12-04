@@ -288,3 +288,17 @@ p.inline {
     }
   }
 }
+.footer {
+  text-align: center;
+  p {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+    padding: 1rem;
+  }
+  p::before {
+    content: "\0a9";
+    font-size: 1rem;
+    vertical-align: -2px;
+    padding-right: 0.3rem;
+  }
+}
