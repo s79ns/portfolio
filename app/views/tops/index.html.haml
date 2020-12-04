@@ -87,11 +87,12 @@
   .header-line.middle
   %p SNSでもお問い合わせ頂けます
   .form
-    %input(type="text" value="" placeholder="Your Name")/
-    %input(type="text" value="" placeholder="Your Email")/
-    %input(type="text" value="" placeholder="Subject")/
-    %textarea(placeholder="messages...")
-    %button Submit
+    %form{action: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScTy0QTwh36zHdGMOBlpBVBKN-7J3-KYkbG5gASqq_LbREQAw/formResponse", method: "post",class:"form"}
+      %input(type="text" name="entry.2005620554" value="" placeholder="Your Name")/
+      %input(type="text" name="entry.1045781291" value="" placeholder="Your Email")/
+      %input(type="text" name="entry.1166974658" value="" placeholder="Subject")/
+      %textarea(name="entry.839337160" placeholder="messages...")
+      %button Submit
 .footer
   %p Naoki Sekine / All Right Reserved.
 
