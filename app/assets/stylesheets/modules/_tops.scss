@@ -6,9 +6,15 @@ a {
   color: #333;
   text-decoration: none;
 }
-
 a:hover {
   cursor: pointer;
+}
+
+a.color {
+  color: #1e73be;
+}
+a.color:hover {
+  text-decoration: underline;
 }
 
 .header-line {
@@ -17,7 +23,6 @@ a:hover {
   width: 10%;
   margin: 1rem 0 1.5rem 0;
 }
-
 .header-line.middle {
   width: 3%;
   margin: 1rem auto 1.5rem;
@@ -187,12 +192,6 @@ p.inline {
         padding-top: 1rem;
       }
     }
-    a.color {
-      color: #1e73be;
-    }
-    a.color:hover {
-      text-decoration: underline;
-    }
     a.isara,
     a.tenkue {
       display: block;
@@ -253,6 +252,9 @@ p.inline {
   background-attachment: fixed;
   text-align: center;
   color: #000;
+  p.inline {
+    margin-left: -0.3rem;
+  }
   .form {
     display: flex;
     flex-direction: column;
