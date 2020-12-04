@@ -3,7 +3,7 @@
   right: 0;
   bottom: 0;
   font-size: 2.5rem;
-  color: #999;
+  color: #ccc;
   transform: translate(-80%, -80%);
   background-color: #333;
   padding: 0.3rem 1.5rem;
@@ -14,7 +14,7 @@
 }
 .scroll.top {
   visibility: visible;
-  opacity: 1;
+  opacity: 0.8;
   transition: 0.5s;
 }
 .scroll:hover {
