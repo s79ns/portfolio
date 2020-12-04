@@ -18,6 +18,11 @@ a:hover {
   margin: 1rem 0 1.5rem 0;
 }
 
+.header-line.middle {
+  width: 3%;
+  margin: 1rem auto 1.5rem;
+}
+
 p.top {
   font-size: 2rem;
 }
@@ -112,10 +117,6 @@ p.inline {
     text-align: center;
     padding-top: 1rem;
   }
-  .header-line {
-    width: 3%;
-    margin: 1rem auto 3rem;
-  }
   .language {
     display: flex;
     &__block {
@@ -163,10 +164,6 @@ p.inline {
   }
   p.bottom {
     padding-bottom: 3rem;
-  }
-  .header-line {
-    width: 3%;
-    margin: 1rem auto 1.5rem;
   }
   .work {
     display: flex;
@@ -245,5 +242,63 @@ p.inline {
     .modal-full-isara {
       max-width: 108px;
     }
+  }
+}
+.container-contact {
+  height: 600px;
+  padding: 2rem 3rem;
+  background-image: url("image04.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: #000;
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    input,
+    textarea {
+      font-size: 0.875rem;
+      width: 25%;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+    textarea {
+      padding: 1rem 1rem 5rem;
+      margin: 1rem 0 2rem;
+    }
+    button {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      background-color: #17a2b8;
+      border-color: #17a2b8;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+    }
+    button:hover {
+      background-color: #138496;
+    }
+  }
+}
+.footer {
+  text-align: center;
+  p {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+    padding: 1rem;
+  }
+  p::before {
+    content: "\0a9";
+    font-size: 1rem;
+    vertical-align: -2px;
+    padding-right: 0.3rem;
   }
 }
