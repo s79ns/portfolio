@@ -1,16 +1,16 @@
 .header
   = render partial: "toggleswitch"
-  %a HOME
-  %a ABOUT
-  %a SKILLS
-  %a WORKS
-  %a CONTACT
-.container-top
+  %a.smooth(href="#HOME") HOME
+  %a.smooth(href="#ABOUT") ABOUT
+  %a.smooth(href="#SKILLS") SKILLS
+  %a.smooth(href="#WORKS") WORKS
+  %a.smooth(href="#CONTACT") CONTACT
+.container-top#HOME
   .container-top__text
     %p.top Baby Steps
     %p.center Creative
     %p Programmer / Engineer
-.container-profile
+.container-profile#ABOUT
   .container-profile__left
   .container-profile__right
     %p.top About Me
@@ -30,7 +30,7 @@
       %a.twitter(href="https://twitter.com/manjuu_babystep" target="_blank" rel="noopener noreferrer")
         %i.fab.fa-twitter
     %p SlackやZoom等にも対応致します
-.container-skill
+.container-skill#SKILLS
   %p.top Web Skills
   .header-line.middle
   .language
@@ -54,7 +54,7 @@
       %p.top.middle MySQL
       .picture.mysql
       %p.small 世界中で最も広く使われている、信頼のあるリレーショナルデータベースを扱います。
-.container-works
+.container-works#WORKS
   %p.top Works
   .header-line.middle
   %p.bottom 過去制作した作品の一部をご紹介します。
@@ -81,7 +81,7 @@
       %a.tenkue{href: games_index_path}
         .mask
           %h4 てんしょくクエストのページに移動します
-.container-contact
+.container-contact#CONTACT
   %p.top Contact
   .header-line.middle
   %a.color(href="https://twitter.com/manjuu_babystep" target="_blank" rel="noopener noreferrer") SNS
