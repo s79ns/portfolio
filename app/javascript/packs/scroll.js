@@ -22,7 +22,7 @@ window.addEventListener("scroll", function () {
 
 document.addEventListener("click", (e) => {
   const target = e.target;
-  if (!target.classList.contains("smooth")) return;
+  if (!target.classList.contains("smoothScroll")) return;
   e.preventDefault();
   const targetId = target.hash;
   document.querySelector(targetId).scrollIntoView({
