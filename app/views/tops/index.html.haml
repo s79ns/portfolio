@@ -30,90 +30,94 @@
       %a.twitter(href="https://twitter.com/manjuu_babystep" target="_blank" rel="noopener noreferrer")
         %i.fab.fa-twitter
     %p SlackやZoom等にも対応致します
-.container-skill#SKILLS
-  %p.top Web Skills
-  .header-line.middle
-  .language
-    .language__block
-      %p.top.middle HTML5 / CSS3
-      .picture.html5css3
-      %p.small Web制作に必要なマークアップ言語を扱い、ご希望のデバイスに合わせたレスポンシブデザインにも対応致します。
-    .language__block
-      %p.top.middle Ruby
-      .picture.ruby
-      %p.small 実用的で、データベースとの連携に優れるWebアプリケーションの開発に特化した言語を扱います。
-    .language__block
-      %p.top.middle Ruby on Rails
-      .picture.rails
-      %p.small 汎用性に優れ、開発効率を最大限に追求したフレームワークを扱います。
-    .language__block
-      %p.top.middle Haml / Sass
-      .picture.sass
-      %p.small 拡張言語とビューテンプレートエンジンで「綺麗」、「読みやすく」、「生産的に」。作品のビューとマークアップの美しさを両立します。
-    .language__block
-      %p.top.middle MySQL
-      .picture.mysql
-      %p.small 世界中で最も広く使われている、信頼のあるリレーショナルデータベースを扱います。
-.container-works#WORKS
-  %p.top Works
-  .header-line.middle
-  %p.bottom 過去制作した作品の一部をご紹介します。
-  .work
-    .work__left
-      %a.sam.isara
-        .mask(data-target="isara")
-          %h4.small 模写作品：isara
-          %h4 クリックするとプレビューを確認できます
-      .modal#isara
-        = image_tag src="isara_full.png",class:"modal-height"
-    .work__right
-      %p.middle 模写作品：isara
-      %p.up.inline
-        %a.color(href="https://isara.life/" target="_blank" rel="noopener noreferrer") フリーランスのマナブさんが運営するサイト
-        %p.inline で、多くのエンジニアの方に模写を推奨されています。
-        %p.up.inline その他の模写作品はこちらです。
-        .work
-          %a.sam.small.jin
-            .mask(data-target="JIN")
-              %h4.small.etc 模写作品：WordPressテーマ『JIN』
-              %h4.etctext クリックするとプレビューを確認できます
-          .modal#JIN
-            = image_tag src="JIN02.png",class:"modal-height"
-          %a.sam.small.airbnb
-            .mask(data-target="airbnb")
-              %h4.small.etc 模写作品：airbnb
-              %h4.etctext クリックするとプレビューを確認できます
-          .modal#airbnb
-            = image_tag src="airbnb02.png",class:"modal-height"
-          %a.sam.small.xeory
-            .mask(data-target="xeory")
-              %h4.small.etc 模写作品：WordPressテーマ『xeory』
-              %h4.etctext クリックするとプレビューを確認できます
-          .modal#xeory
-            = image_tag src="xeory02.png",class:"modal-height"
-  .work
-    .work__left
-      %p.middle.reverse てんしょくクエスト
-      %p.reverse.up JavaScriptを学習する過程で制作した戦闘ゲームです。
-      %p.reverse.up バトルログ履歴・連戦・クリティカル有りの涙なしでは語れない物語？
-    .work__right
-      %a.sam.tenkue{href: games_index_path}
-        .mask-notmodal
-          %h4 てんしょくクエストのページに移動します
-.container-contact#CONTACT
-  %p.top Contact
-  .header-line.middle
-  %a.color(href="https://twitter.com/manjuu_babystep" target="_blank" rel="noopener noreferrer") SNS
-  %p.inline でもお問い合わせ頂けます
-  .form
-    %form{action: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScTy0QTwh36zHdGMOBlpBVBKN-7J3-KYkbG5gASqq_LbREQAw/formResponse", method: "post",class:"form"}
-      %input(type="text" name="entry.2005620554" value="" placeholder="Your Name")/
-      %input(type="text" name="entry.1045781291" value="" placeholder="Your Email")/
-      %input(type="text" name="entry.1166974658" value="" placeholder="Subject")/
-      %textarea(name="entry.839337160" placeholder="messages...")
-      %button Submit
-.footer
-  %p Naoki Sekine / All Right Reserved.
+.animationTarget
+  .container-skill#SKILLS
+    %p.top Web Skills
+    .header-line.middle
+    .language
+      .language__block
+        %p.top.middle HTML5 / CSS3
+        .picture.html5css3
+        %p.small Web制作に必要なマークアップ言語を扱い、ご希望のデバイスに合わせたレスポンシブデザインにも対応致します。
+      .language__block
+        %p.top.middle Ruby
+        .picture.ruby
+        %p.small 実用的で、データベースとの連携に優れるWebアプリケーションの開発に特化した言語を扱います。
+      .language__block
+        %p.top.middle Ruby on Rails
+        .picture.rails
+        %p.small 汎用性に優れ、開発効率を最大限に追求したフレームワークを扱います。
+      .language__block
+        %p.top.middle Haml / Sass
+        .picture.sass
+        %p.small 拡張言語とビューテンプレートエンジンで「綺麗」、「読みやすく」、「生産的に」。作品のビューとマークアップの美しさを両立します。
+      .language__block
+        %p.top.middle MySQL
+        .picture.mysql
+        %p.small 世界中で最も広く使われている、信頼のあるリレーショナルデータベースを扱います。
+.animationTarget
+  .container-works#WORKS
+    %p.top Works
+    .header-line.middle
+    %p.bottom 過去制作した作品の一部をご紹介します。
+    .work
+      .work__left
+        %a.sam.isara
+          .mask(data-target="isara")
+            %h4.small 模写作品：isara
+            %h4 クリックするとプレビューを確認できます
+        .modal#isara
+          = image_tag src="isara_full.png",class:"modal-height"
+      .work__right
+        %p.middle 模写作品：isara
+        %p.up.inline
+          %a.color(href="https://isara.life/" target="_blank" rel="noopener noreferrer") フリーランスのマナブさんが運営するサイト
+          %p.inline で、多くのエンジニアの方に模写を推奨されています。
+          %p.up.inline その他の模写作品はこちらです。
+          .work
+            %a.sam.small.jin
+              .mask(data-target="JIN")
+                %h4.small.etc 模写作品：WordPressテーマ『JIN』
+                %h4.etctext クリックするとプレビューを確認できます
+            .modal#JIN
+              = image_tag src="JIN02.png",class:"modal-height"
+            %a.sam.small.airbnb
+              .mask(data-target="airbnb")
+                %h4.small.etc 模写作品：airbnb
+                %h4.etctext クリックするとプレビューを確認できます
+            .modal#airbnb
+              = image_tag src="airbnb02.png",class:"modal-height"
+            %a.sam.small.xeory
+              .mask(data-target="xeory")
+                %h4.small.etc 模写作品：WordPressテーマ『xeory』
+                %h4.etctext クリックするとプレビューを確認できます
+            .modal#xeory
+              = image_tag src="xeory02.png",class:"modal-height"
+    .work
+      .work__left
+        %p.middle.reverse てんしょくクエスト
+        %p.reverse.up JavaScriptを学習する過程で制作した戦闘ゲームです。
+        %p.reverse.up バトルログ履歴・連戦・クリティカル有りの涙なしでは語れない物語？
+      .work__right
+        %a.sam.tenkue{href: games_index_path}
+          .mask-notmodal
+            %h4 てんしょくクエストのページに移動します
+.animationTarget
+  .container-contact#CONTACT
+    %p.top Contact
+    .header-line.middle
+    %a.color(href="https://twitter.com/manjuu_babystep" target="_blank" rel="noopener noreferrer") SNS
+    %p.inline でもお問い合わせ頂けます
+    .form
+      %form{action: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScTy0QTwh36zHdGMOBlpBVBKN-7J3-KYkbG5gASqq_LbREQAw/formResponse", method: "post",class:"form"}
+        %input(type="text" name="entry.2005620554" value="" placeholder="Your Name")/
+        %input(type="text" name="entry.1045781291" value="" placeholder="Your Email")/
+        %input(type="text" name="entry.1166974658" value="" placeholder="Subject")/
+        %textarea(name="entry.839337160" placeholder="messages...")
+        %button Submit
+.animationTarget
+  .footer
+    %p Naoki Sekine / All Right Reserved.
 
 .scroll#scrollValue
   %i.fas.fa-angle-up

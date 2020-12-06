@@ -54,6 +54,7 @@ p.inline {
     transition: 0.3s;
   }
 }
+
 .container-top {
   height: 600px;
   background-image: url("image01.jpeg");
@@ -72,6 +73,7 @@ p.inline {
     }
   }
 }
+
 .container-profile {
   display: flex;
   justify-content: space-around;
@@ -110,6 +112,7 @@ p.inline {
     }
   }
 }
+
 .container-skill {
   height: 600px;
   padding: 2rem 3rem;
@@ -164,6 +167,7 @@ p.inline {
     }
   }
 }
+
 .container-works {
   padding: 3rem;
   p {
@@ -227,7 +231,6 @@ p.inline {
       margin-right: auto;
       background-image: url("tenkue.png");
     }
-
     .mask,
     .mask-notmodal {
       width: 100%;
@@ -277,6 +280,7 @@ p.inline {
     }
   }
 }
+
 .container-contact {
   height: 600px;
   padding: 2rem 3rem;
@@ -325,6 +329,7 @@ p.inline {
     }
   }
 }
+
 .footer {
   text-align: center;
   p {
@@ -338,4 +343,12 @@ p.inline {
     vertical-align: -2px;
     padding-right: 0.3rem;
   }
+}
+
+.animationTarget {
+  opacity: 0;
+  transition: 1s;
+}
+.animationTarget.show {
+  opacity: 1;
 }
