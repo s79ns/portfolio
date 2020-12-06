@@ -1,16 +1,16 @@
 .header
   = render partial: "toggleswitch"
-  %a HOME
-  %a ABOUT
-  %a SKILLS
-  %a WORKS
-  %a CONTACT
-.container-top
+  %a.smoothScroll(href="#HOME") HOME
+  %a.smoothScroll(href="#ABOUT") ABOUT
+  %a.smoothScroll(href="#SKILLS") SKILLS
+  %a.smoothScroll(href="#WORKS") WORKS
+  %a.smoothScroll(href="#CONTACT") CONTACT
+.container-top#HOME
   .container-top__text
     %p.top Baby Steps
     %p.center Creative
     %p Programmer / Engineer
-.container-profile
+.container-profile#ABOUT
   .container-profile__left
   .container-profile__right
     %p.top About Me
@@ -30,7 +30,7 @@
       %a.twitter(href="https://twitter.com/manjuu_babystep" target="_blank" rel="noopener noreferrer")
         %i.fab.fa-twitter
     %p SlackやZoom等にも対応致します
-.container-skill
+.container-skill#SKILLS
   %p.top Web Skills
   .header-line.middle
   .language
@@ -54,35 +54,53 @@
       %p.top.middle MySQL
       .picture.mysql
       %p.small 世界中で最も広く使われている、信頼のあるリレーショナルデータベースを扱います。
-.container-works
+.container-works#WORKS
   %p.top Works
   .header-line.middle
   %p.bottom 過去制作した作品の一部をご紹介します。
   .work
     .work__left
-      %a.isara
-        .mask#modalOpen
+      %a.sam.isara
+        .mask(data-target="isara")
           %h4.small 模写作品：isara
           %h4 クリックするとプレビューを確認できます
-      .modal#modal
-        = image_tag src="isara_full.png",class:"modal-full-isara"
-        %a.modalClose#modalClose ×
+      .modal#isara
+        = image_tag src="isara_full.png",class:"modal-width"
     .work__right
       %p.middle 模写作品：isara
       %p.up.inline
         %a.color(href="https://isara.life/" target="_blank" rel="noopener noreferrer") フリーランスのマナブさんが運営するサイト
         %p.inline で、多くのエンジニアの方に模写を推奨されています。
-      %p.up 他に手がけた模写作品は以下の通りです。
+        %p.up.inline その他の模写作品はこちらです。
+        .work
+          %a.sam.small.jin
+            .mask(data-target="JIN")
+              %h4.small.etc 模写作品：WordPressテーマ『JIN』
+              %h4.etctext クリックするとプレビューを確認できます
+          .modal#JIN
+            = image_tag src="JIN02.png",class:"modal-width"
+          %a.sam.small.airbnb
+            .mask(data-target="airbnb")
+              %h4.small.etc 模写作品：airbnb
+              %h4.etctext クリックするとプレビューを確認できます
+          .modal#airbnb
+            = image_tag src="airbnb02.png",class:"modal-width"
+          %a.sam.small.xeory
+            .mask(data-target="xeory")
+              %h4.small.etc 模写作品：WordPressテーマ『xeory』
+              %h4.etctext クリックするとプレビューを確認できます
+          .modal#xeory
+            = image_tag src="xeory02.png",class:"modal-width"
   .work
     .work__left
       %p.middle.reverse てんしょくクエスト
       %p.reverse.up JavaScriptを学習する過程で制作した戦闘ゲームです。
       %p.reverse.up バトルログ履歴・連戦・クリティカル有りの涙なしでは語れない物語？
     .work__right
-      %a.tenkue{href: games_index_path}
+      %a.sam.tenkue{href: games_index_path}
         .mask
           %h4 てんしょくクエストのページに移動します
-.container-contact
+.container-contact#CONTACT
   %p.top Contact
   .header-line.middle
   %a.color(href="https://twitter.com/manjuu_babystep" target="_blank" rel="noopener noreferrer") SNS
@@ -100,7 +118,8 @@
 .scroll#scrollValue
   %i.fas.fa-angle-up
 
-.modalmask#modalmask
+.modalmask
+  %a.modalClose#modalClose ×
 
 = javascript_pack_tag 'darkmode'
 = javascript_pack_tag 'modal'

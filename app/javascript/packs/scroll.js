@@ -1,19 +1,32 @@
+// トップに戻るボタン
+
 window.addEventListener("scroll", function () {
-  // イベントターゲットをwindow、発火条件はスクロールという関数を作る
-  const scroll = document.documentElement.scrollTop; // documentのルート要素で一番上からのスクロール値を取得する処理を変数で定義
+  const scroll = document.documentElement.scrollTop;
   const PageTopBtn = document.getElementById("scrollValue");
 
   if (scroll > 300) {
-    document.querySelector(".scroll").classList.add("top"); // スクロール値が一定以下であればクラスを付与
+    document.querySelector(".scroll").classList.add("top");
   } else {
-    document.querySelector(".scroll").classList.remove("top"); // スクロール値が一定以上であればクラスを削除
+    document.querySelector(".scroll").classList.remove("top");
   }
 
   PageTopBtn.addEventListener("click", () => {
     window.scrollTo({
-      // 文書内の特定の組み合わせまでスクロールする
       top: 0,
-      behavior: "smooth", // スムーススクロール
+      behavior: "smooth",
     });
+  });
+});
+
+// コンテンツのスムーズスクロール
+
+document.addEventListener("click", (e) => {
+  const target = e.target;
+  if (!target.classList.contains("smoothScroll")) return;
+  e.preventDefault();
+  const targetId = target.hash;
+  document.querySelector(targetId).scrollIntoView({
+    behavior: "smooth",
+    block: "start",
   });
 });
