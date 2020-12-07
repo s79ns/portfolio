@@ -345,10 +345,68 @@ p.inline {
   }
 }
 
-.animationTarget {
+// スクロールアニメーション
+
+.animationTarget.show .delay,
+.animationTarget.show .header-line.middle,
+.animationTarget.show .language__block,
+.animationTarget.show .picture,
+.animationTarget.show .work,
+.animationTarget.show .work.translateXscroll,
+.animationTarget.show a.sam,
+.animationTarget.show .container-contact {
+  opacity: 1;
+  transform: none;
+}
+
+.delay {
   opacity: 0;
+  transform: translateY(20px);
   transition: 1s;
 }
-.animationTarget.show {
-  opacity: 1;
+
+.language__block {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.language__block.delay1 {
+  transition: 1s;
+}
+
+.language__block.delay2 {
+  transition: 1.2s;
+}
+
+.language__block.delay3 {
+  transition: 1.4s;
+}
+
+.language__block.delay4 {
+  transition: 1.6s;
+}
+.language__block.delay5 {
+  transition: 1.8s;
+}
+
+.picture,
+a.sam {
+  opacity: 0;
+  transition: 1s 0.5s; // 0.5秒遅れて1秒かけてアニメーションする
+}
+
+.work {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: 1.5s;
+}
+.work.translateXscroll {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: 1.5s;
+}
+
+.container-contact {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
 }
