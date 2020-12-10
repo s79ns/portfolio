@@ -83,7 +83,7 @@ p.inline {
     margin: 0 auto;
   }
   &__left {
-    background-image: url("image02.jpeg");
+    background-image: url("image02.jpg");
     background-position: center;
     background-size: cover;
     height: 300px;
@@ -150,19 +150,19 @@ p.inline {
         background-position: center;
       }
       .picture.html5css3 {
-        background-image: url("html5css3.jpg");
+        background-image: url("html5css3.webp");
       }
       .picture.ruby {
-        background-image: url("ruby.png");
+        background-image: url("ruby.webp");
       }
       .picture.rails {
-        background-image: url("rails_logo.png");
+        background-image: url("rails_logo.webp");
       }
       .picture.sass {
-        background-image: url("sass.png");
+        background-image: url("sass.webp");
       }
       .picture.mysql {
-        background-image: url("mysql.png");
+        background-image: url("mysql.webp");
       }
     }
   }
