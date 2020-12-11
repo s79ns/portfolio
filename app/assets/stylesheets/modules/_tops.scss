@@ -55,6 +55,10 @@ p.inline {
   }
 }
 
+.hamburgermenu-header {
+  display: none;
+}
+
 .container-top {
   height: 600px;
   background-image: url("image01.jpeg");
@@ -409,4 +413,61 @@ a.sam {
   opacity: 0;
   transform: translateY(50px);
   transition: 1s;
+}
+
+@media screen and (max-width: 768px) {
+  .header > a.smoothScroll,
+  .header > .toggle-switch {
+    display: none;
+  }
+
+  .hamburgermenu-header {
+    display: block;
+    .hamburger-nav {
+      padding: 8rem 0;
+      margin: initial;
+      text-align: center;
+      ul {
+        li {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .toggle-switch {
+        margin: 1rem 0;
+        p {
+          font-size: 2rem;
+          padding-right: 1.5rem;
+        }
+      }
+      .toggle-label {
+        width: 80px;
+        height: 50px;
+        &:after {
+          width: 45px;
+          height: 50px;
+        }
+      }
+      a.smoothScroll {
+        font-size: 2rem;
+        margin: 1rem 0;
+      }
+    }
+  }
+  .container-top {
+    width: 100vh;
+    background-attachment: initial;
+    &__text {
+      letter-spacing: 5px;
+      p.top {
+        font-size: 3rem;
+      }
+      p.center {
+        padding: 1rem 0;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
 }
