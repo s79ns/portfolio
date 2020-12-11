@@ -5,6 +5,7 @@
   %a.smoothScroll(href="#SKILLS") SKILLS
   %a.smoothScroll(href="#WORKS") WORKS
   %a.smoothScroll(href="#CONTACT") CONTACT
+  = render partial: "hamburger-menu"
 .container-top#HOME
   .container-top__text
     %p.top Baby Steps
@@ -129,3 +130,4 @@
 = javascript_pack_tag 'darkmode'
 = javascript_pack_tag 'modal'
 = javascript_pack_tag 'scroll'
+= javascript_pack_tag 'hamburger-menu'
