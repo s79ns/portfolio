@@ -552,6 +552,15 @@ a.sam {
       font-size: 3rem;
     }
   }
+  .animationTarget {
+    height: 1000px;
+  }
+  .animationTarget.responsive1 {
+    margin-top: 2200px;
+  }
+  .animationTarget.responsive2 {
+    margin-top: 1500px;
+  }
 
   .container-skill {
     height: auto;
