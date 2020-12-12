@@ -428,6 +428,11 @@ a.sam {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    max-width: 568px;
+    width: 100vh;
+  }
+
   .header > a.smoothScroll {
     display: none;
   }
@@ -475,13 +480,6 @@ a.sam {
         }
       }
     }
-  }
-  .container-top,
-  .container-profile,
-  .container-skill,
-  .container-contact,
-  .footer {
-    width: 100vh;
   }
 
   .container-top {
@@ -549,14 +547,14 @@ a.sam {
     width: 10%;
     margin: 2rem auto 3rem;
   }
+  .delay {
+    p.top {
+      font-size: 3rem;
+    }
+  }
 
   .container-skill {
     height: auto;
-    .delay {
-      p.top {
-        font-size: 3rem;
-      }
-    }
     .language {
       flex-direction: column;
       &__block {
@@ -570,6 +568,80 @@ a.sam {
         p.small {
           font-size: 1.5rem;
           line-height: 45px;
+        }
+      }
+    }
+  }
+
+  .container-works {
+    .delay {
+      p.bottom {
+        font-size: 2rem;
+        padding: 0 2rem;
+      }
+    }
+    .work {
+      flex-direction: column;
+      p.middle {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #aaa;
+        text-align: initial;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      p.inline {
+        display: inline;
+      }
+      a.sam {
+        width: 100%;
+        height: 230px;
+        border: 1px solid #bbb;
+      }
+      &__left {
+        a.sam.isara {
+          margin: 0 auto;
+          width: 100%;
+          height: 300px;
+        }
+      }
+      &__right {
+        a.color {
+          margin-right: -0.5rem;
+        }
+        p.up.inline.responsive {
+          display: block;
+        }
+        .work {
+          a.sam.small.jin {
+            margin-top: 2rem;
+          }
+          a.sam.small.airbnb {
+            margin: 2rem 0 0.5rem;
+          }
+        }
+      }
+      &__left,
+      &__right {
+        width: 100%;
+      }
+    }
+    .work.translateXscroll {
+      .work__left {
+        p.reverse.up {
+          text-align: initial;
+          padding-top: initial;
+        }
+        p.reverse.up.responsive {
+          padding-top: 1rem;
+        }
+      }
+      .work__right {
+        a.sam.tenkue {
+          height: 300px;
+          margin-top: -2rem;
         }
       }
     }
