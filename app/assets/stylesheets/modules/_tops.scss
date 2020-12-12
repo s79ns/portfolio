@@ -416,13 +416,38 @@ a.sam {
 }
 
 @media screen and (max-width: 768px) {
-  .header > a.smoothScroll,
-  .header > .toggle-switch {
+  .header > a.smoothScroll {
     display: none;
   }
-
+  .header {
+    padding: 1rem 3rem;
+    justify-content: initial;
+    .toggle-switch {
+      margin: 1rem 0;
+      p {
+        font-size: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+    .toggle-label {
+      width: 90px;
+      height: 50px;
+      &:after {
+        width: 55px;
+        height: 50px;
+      }
+    }
+    .toggle-input:checked {
+      + .toggle-label {
+        background-color: #f66;
+        &:after {
+          left: 40px;
+        }
+      }
+    }
+  }
   .hamburgermenu-header {
-    display: block;
+    display: initial;
     .hamburger-nav {
       padding: 8rem 0;
       margin: initial;
@@ -431,35 +456,22 @@ a.sam {
         li {
           display: flex;
           flex-direction: column;
+          a.smoothScroll {
+            font-size: 2rem;
+            margin: 1rem 0;
+          }
         }
-      }
-      .toggle-switch {
-        margin: 1rem 0;
-        p {
-          font-size: 2rem;
-          padding-right: 1.5rem;
-        }
-      }
-      .toggle-label {
-        width: 80px;
-        height: 50px;
-        &:after {
-          width: 45px;
-          height: 50px;
-        }
-      }
-      a.smoothScroll {
-        font-size: 2rem;
-        margin: 1rem 0;
       }
     }
   }
   .container-top {
     width: 100vh;
+    height: 700px;
     background-attachment: initial;
     &__text {
       letter-spacing: 5px;
       p.top {
+        padding-top: 5rem;
         font-size: 3rem;
       }
       p.center {
