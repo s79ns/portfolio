@@ -5,8 +5,8 @@
   width: 80px;
   background-color: #fff;
   position: absolute; // 追従させるならabsoluteではなく、ここと、navにもfixed
-  top: 30px;
-  left: 30px;
+  top: 15px;
+  right: 50px;
   z-index: 2;
   border-radius: 50%;
   div {

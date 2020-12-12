@@ -35,6 +35,15 @@ p.inline {
   display: inline-block;
 }
 
+// br.responsiveで文字間がズレたら適用してください
+p.inline.responsive {
+  margin: 0 -0.2rem 0 0.2rem;
+}
+
+br.responsive {
+  display: none;
+}
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -114,6 +123,9 @@ p.inline {
         opacity: 0.8;
       }
     }
+  }
+  &__right.responsive {
+    display: none;
   }
 }
 
@@ -416,13 +428,38 @@ a.sam {
 }
 
 @media screen and (max-width: 768px) {
-  .header > a.smoothScroll,
-  .header > .toggle-switch {
+  .header > a.smoothScroll {
     display: none;
   }
-
+  .header {
+    padding: 1rem 3rem;
+    justify-content: initial;
+    .toggle-switch {
+      margin: 1rem 0;
+      p {
+        font-size: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+    .toggle-label {
+      width: 90px;
+      height: 50px;
+      &:after {
+        width: 55px;
+        height: 50px;
+      }
+    }
+    .toggle-input:checked {
+      + .toggle-label {
+        background-color: #f66;
+        &:after {
+          left: 40px;
+        }
+      }
+    }
+  }
   .hamburgermenu-header {
-    display: block;
+    display: initial;
     .hamburger-nav {
       padding: 8rem 0;
       margin: initial;
@@ -431,35 +468,26 @@ a.sam {
         li {
           display: flex;
           flex-direction: column;
+          a.smoothScroll {
+            font-size: 2rem;
+            margin: 1rem 0;
+          }
         }
-      }
-      .toggle-switch {
-        margin: 1rem 0;
-        p {
-          font-size: 2rem;
-          padding-right: 1.5rem;
-        }
-      }
-      .toggle-label {
-        width: 80px;
-        height: 50px;
-        &:after {
-          width: 45px;
-          height: 50px;
-        }
-      }
-      a.smoothScroll {
-        font-size: 2rem;
-        margin: 1rem 0;
       }
     }
   }
-  .container-top {
+  .container-top,
+  .container-profile {
     width: 100vh;
+  }
+
+  .container-top {
+    height: 700px;
     background-attachment: initial;
     &__text {
       letter-spacing: 5px;
       p.top {
+        padding-top: 5rem;
         font-size: 3rem;
       }
       p.center {
@@ -467,6 +495,50 @@ a.sam {
       }
       p {
         font-size: 2rem;
+      }
+    }
+  }
+
+  .container-profile {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    &__right.responsive {
+      display: block;
+      p.top {
+        font-size: 3rem;
+      }
+      .header-line {
+        width: 20%;
+        margin: 2rem auto 3rem;
+      }
+    }
+    &__left {
+      border-radius: 50%;
+      height: 400px;
+      width: 400px;
+    }
+    &__right:not(.responsive) {
+      text-align: center;
+      font-size: 2rem;
+      padding: 3rem 0;
+      line-height: 55px;
+      p.bottom {
+        padding-bottom: 2rem;
+      }
+      p.bottom.responsive {
+        padding: 2rem 0;
+      }
+      .sns {
+        font-size: 3rem;
+        padding-bottom: 1.5rem;
+      }
+      p.top,
+      .header-line {
+        display: none;
+      }
+      br.responsive {
+        display: block;
       }
     }
   }
