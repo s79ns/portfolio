@@ -477,7 +477,8 @@ a.sam {
     }
   }
   .container-top,
-  .container-profile {
+  .container-profile,
+  .container-skill {
     width: 100vh;
   }
 
@@ -539,6 +540,34 @@ a.sam {
       }
       br.responsive {
         display: block;
+      }
+    }
+  }
+  .container-skill {
+    height: auto;
+    .delay {
+      p.top {
+        font-size: 3rem;
+      }
+      .header-line.middle {
+        width: 10%;
+        margin: 2rem auto 3rem;
+      }
+    }
+    .language {
+      flex-direction: column;
+      &__block {
+        width: initial;
+        p.top.middle {
+          font-size: 2.5rem;
+        }
+        .picture {
+          margin: 3rem auto;
+        }
+        p.small {
+          font-size: 1.5rem;
+          line-height: 45px;
+        }
       }
     }
   }
