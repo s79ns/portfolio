@@ -479,7 +479,8 @@ a.sam {
   .container-top,
   .container-profile,
   .container-skill,
-  .container-contact {
+  .container-contact,
+  .footer {
     width: 100vh;
   }
 
@@ -573,6 +574,7 @@ a.sam {
       }
     }
   }
+
   .container-contact {
     height: auto;
     background-position: right;
@@ -605,5 +607,22 @@ a.sam {
         padding: 1rem 2rem;
       }
     }
+  }
+
+  .footer {
+    p {
+      font-size: 1.25rem;
+      letter-spacing: 2px;
+    }
+    p::before {
+      font-size: 2rem;
+      vertical-align: sub;
+    }
+  }
+
+  div.scroll {
+    font-size: 4rem;
+    padding: 0.1rem 2rem;
+    transform: translate(-20%, -20%);
   }
 }
