@@ -1,22 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-a:hover {
-  cursor: pointer;
-}
-
-a.color {
-  color: #1e73be;
-}
-a.color:hover {
-  text-decoration: underline;
-}
-
 .header-line {
   border: 3px solid #ff6928;
   border-radius: 2px;
@@ -359,55 +340,6 @@ br.responsive {
     vertical-align: -2px;
     padding-right: 0.3rem;
   }
-}
-
-// スクロールアニメーション
-
-.animationTarget.show .delay,
-.animationTarget.show .header-line.middle,
-.animationTarget.show .language__block,
-.animationTarget.show .picture,
-.animationTarget.show .work,
-.animationTarget.show .work.translateXscroll,
-.animationTarget.show a.sam,
-.animationTarget.show .container-contact {
-  opacity: 1;
-  transform: none;
-}
-
-.delay {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 1s;
-}
-
-.language__block {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.language__block.delay1 {
-  transition: 1s;
-}
-
-.language__block.delay2 {
-  transition: 1.2s;
-}
-
-.language__block.delay3 {
-  transition: 1.4s;
-}
-
-.language__block.delay4 {
-  transition: 1.6s;
-}
-.language__block.delay5 {
-  transition: 1.8s;
-}
-
-.picture,
-a.sam {
-  opacity: 0;
-  transition: 1s 0.5s; // 0.5秒遅れて1秒かけてアニメーションする
 }
 
 .work {

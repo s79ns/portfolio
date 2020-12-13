@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+a.color {
+  color: #1e73be;
+}
+a.color:hover {
+  text-decoration: underline;
+}
