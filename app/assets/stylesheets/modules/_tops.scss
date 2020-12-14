@@ -568,6 +568,45 @@ br.responsive {
       &__right {
         width: 100%;
       }
+      .mask {
+        h4 {
+          font-size: 1.75rem;
+          padding: 5rem 1rem 0 0;
+          margin: 0 1rem -4rem;
+        }
+        h4.small {
+          font-size: 1.5rem;
+          margin-bottom: -4rem;
+        }
+        h4.small.etc {
+          font-size: 1.2rem;
+          padding: 0.2rem 0;
+          margin: 3rem 1rem -5rem;
+        }
+        h4.etctext {
+          font-size: 1.75rem;
+          padding: 6rem 1rem 0 0;
+          margin: 0 1rem;
+        }
+      }
+      .mask-notmodal {
+        h4 {
+          font-size: 1.75rem;
+          margin: 0 auto;
+        }
+      }
+      a:hover .mask {
+        opacity: 1;
+        padding-left: 10px;
+      }
+      a:hover .mask-notmodal {
+        opacity: 1;
+        padding-left: 10px;
+      }
+      a.sam.small:hover .mask {
+        opacity: 1;
+        padding-left: 10px;
+      }
     }
     .work.translateXscroll {
       .work__left {
@@ -626,6 +665,7 @@ br.responsive {
     p {
       font-size: 1.25rem;
       letter-spacing: 2px;
+      padding: 2rem 0 1rem;
     }
     p::before {
       font-size: 2rem;
