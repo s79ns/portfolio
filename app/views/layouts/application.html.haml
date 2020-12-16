@@ -9,7 +9,7 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"}
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    %script{:src => "https://www.google.com/recaptcha/api.js?render=6LeevgYaAAAAAGRs8Foi5ydEFSd4zmP92XrJOdqh"}
+    %script{src:"https://www.google.com/recaptcha/api.js?render=6LeevgYaAAAAAGRs8Foi5ydEFSd4zmP92XrJOdqh"}
     :javascript
       grecaptcha.ready(function () {
         grecaptcha.execute('6LeevgYaAAAAAGRs8Foi5ydEFSd4zmP92XrJOdqh', { action: 'contact' }).then(function (token) {
