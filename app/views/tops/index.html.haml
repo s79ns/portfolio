@@ -106,7 +106,7 @@
         %p.reverse.up JavaScriptを学習する過程で制作した戦闘ゲームです。
         %p.reverse.up.responsive バトルログ履歴・連戦・クリティカル有りの涙なしでは語れない物語？
       .work__right
-        %a.sam.tenkue{href: games_index_path}
+        %a.sam.tenkue(data-turbolinks="false"){href: games_index_path}
           .mask-notmodal
             %h4 てんしょくクエストのページに移動します
 .animationTarget.responsive2
@@ -135,3 +135,4 @@
 = javascript_pack_tag 'modal'
 = javascript_pack_tag 'scroll'
 = javascript_pack_tag 'hamburger-menu'
+= javascript_pack_tag 'recapcha'
