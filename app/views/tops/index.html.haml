@@ -106,6 +106,7 @@
         %p.reverse.up JavaScriptを学習する過程で制作した戦闘ゲームです。
         %p.reverse.up.responsive バトルログ履歴・連戦・クリティカル有りの涙なしでは語れない物語？
       .work__right
+        -# data-turbolinksがリンク先にscroll.jsをそのまま持ってきてしまうので無効化
         %a.sam.tenkue(data-turbolinks="false"){href: games_index_path}
           .mask-notmodal
             %h4 てんしょくクエストのページに移動します
