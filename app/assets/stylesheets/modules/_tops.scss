@@ -117,13 +117,21 @@ br.responsive {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  p.top {
-    color: #fff;
+  color: #fff;
+  p {
     text-align: center;
-    padding-top: 1rem;
+  }
+  .delay {
+    p.top {
+      padding-top: 0.5rem;
+    }
   }
   .language {
-    display: flex;
+    overflow-x: scroll;
+    .inner {
+      display: flex;
+      width: 120%;
+    }
     &__block {
       width: 20%;
       padding: 1rem;
@@ -135,8 +143,8 @@ br.responsive {
       }
       p.small {
         font-size: 0.875rem;
-        color: #fff;
         line-height: 25px;
+        text-align: left;
       }
       .picture {
         height: 200px;
@@ -157,6 +165,9 @@ br.responsive {
       }
       .picture.sass {
         background-image: url("sass.webp");
+      }
+      .picture.react {
+        background-image: url("react.png");
       }
       .picture.mysql {
         background-image: url("mysql.webp");
