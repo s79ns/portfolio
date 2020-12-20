@@ -499,7 +499,7 @@ br.responsive {
     height: 1000px;
   }
   .animationTarget.responsive1 {
-    margin-top: 2200px;
+    margin-top: 2800px;
   }
   .animationTarget.responsive2 {
     margin-top: 1500px;
@@ -508,18 +508,22 @@ br.responsive {
   .container-skill {
     height: auto;
     .language {
-      flex-direction: column;
-      &__block {
-        width: initial;
-        p.top.middle {
-          font-size: 2.5rem;
-        }
-        .picture {
-          margin: 3rem auto;
-        }
-        p.small {
-          font-size: 1.5rem;
-          line-height: 45px;
+      overflow-x: initial;
+      .inner {
+        width: 100%;
+        flex-direction: column;
+        .language__block {
+          width: initial;
+          p.top.middle {
+            font-size: 2.5rem;
+          }
+          .picture {
+            margin: 3rem auto;
+          }
+          p.small {
+            font-size: 1.5rem;
+            line-height: 45px;
+          }
         }
       }
     }
@@ -673,6 +677,7 @@ br.responsive {
   }
 
   .footer {
+    margin-bottom: 70px;
     p {
       font-size: 1.25rem;
       letter-spacing: 2px;
@@ -686,6 +691,10 @@ br.responsive {
 
   div.scroll {
     font-size: 3rem;
-    transform: translate(0%, -150%);
+    transform: translate(0%, -200%);
+  }
+
+  div.grecaptcha-badge {
+    margin-bottom: 70px;
   }
 }
