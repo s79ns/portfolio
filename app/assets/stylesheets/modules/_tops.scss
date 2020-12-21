@@ -370,6 +370,11 @@ br.responsive {
   transition: 1s;
 }
 
+// reactを試験的に導入
+.react {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   body {
     max-width: 568px;
@@ -507,6 +512,11 @@ br.responsive {
 
   .container-skill {
     height: auto;
+    .delay {
+      p.bottom {
+        display: none;
+      }
+    }
     .language {
       overflow-x: initial;
       .inner {
