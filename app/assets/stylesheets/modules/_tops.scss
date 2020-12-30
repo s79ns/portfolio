@@ -370,6 +370,10 @@ br.responsive {
   }
 }
 
+div.scroll {
+  border-radius: 5px 0 0 5px; // 大元は他で使いまわしたいので今回はこちらで指定;
+}
+
 .work {
   opacity: 0;
   transform: translateX(60px);
@@ -521,7 +525,7 @@ br.responsive {
     height: 1000px;
   }
   .animationTarget.responsive1 {
-    margin-top: 2800px;
+    margin-top: 2900px;
   }
   .animationTarget.responsive2 {
     margin-top: 1500px;
