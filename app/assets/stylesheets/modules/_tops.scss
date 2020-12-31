@@ -38,10 +38,10 @@ br.responsive {
   a {
     font-size: 0.8rem;
     padding: 1rem;
-  }
-  a:hover {
-    background-color: rgba($color: #ddd, $alpha: 0.8);
-    transition: 0.3s;
+    &:hover {
+      background-color: rgba($color: #ddd, $alpha: 0.8);
+      transition: 0.3s;
+    }
   }
 }
 
@@ -348,9 +348,9 @@ br.responsive {
       color: #fff;
       cursor: pointer;
       padding: 0.5rem 1rem;
-    }
-    button:hover {
-      background-color: #138496;
+      &:hover {
+        background-color: #138496;
+      }
     }
   }
 }
@@ -361,12 +361,12 @@ br.responsive {
     font-size: 0.5rem;
     letter-spacing: 1px;
     padding: 1rem;
-  }
-  p::before {
-    content: "\0a9";
-    font-size: 1rem;
-    vertical-align: -2px;
-    padding-right: 0.3rem;
+    &::before {
+      content: "\0a9";
+      font-size: 1rem;
+      vertical-align: -2px;
+      padding-right: 0.3rem;
+    }
   }
 }
 
@@ -716,10 +716,10 @@ div.scroll {
       font-size: 1.25rem;
       letter-spacing: 2px;
       padding: 2rem 0 1rem;
-    }
-    p::before {
-      font-size: 2rem;
-      vertical-align: sub;
+      &::before {
+        font-size: 2rem;
+        vertical-align: sub;
+      }
     }
   }
 

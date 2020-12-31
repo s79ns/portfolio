@@ -5,13 +5,14 @@
 a {
   color: #333;
   text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
-a:hover {
-  cursor: pointer;
-}
+
 a.color {
   color: #1e73be;
-}
-a.color:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }

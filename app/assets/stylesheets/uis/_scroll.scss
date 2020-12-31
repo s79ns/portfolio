@@ -13,14 +13,14 @@
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
+  &:hover {
+    color: #fff;
+  }
 }
 .scroll.top {
   visibility: visible;
   opacity: 0.8;
   transition: 0.5s;
-}
-.scroll:hover {
-  color: #fff;
 }
 
 // コンテンツをスクロールするとふわっと出てくる
