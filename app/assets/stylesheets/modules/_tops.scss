@@ -1,3 +1,16 @@
+$containerHeight: 600px;
+
+@mixin backGround {
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin flexBoxCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header-line {
   border: 3px solid #ff6928;
   border-radius: 2px;
@@ -10,7 +23,7 @@
 }
 
 p.top {
-  font-size: 2rem;
+  font-size: $fontL;
 }
 p.inline {
   display: inline-block;
@@ -50,14 +63,11 @@ br.responsive {
 }
 
 .container-top {
-  height: 600px;
-  background-image: url("image01.jpeg");
-  background-position: center;
-  background-size: cover;
+  height: $containerHeight;
+  @include backGround();
   background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url("image01.jpeg");
+  @include flexBoxCenter();
   &__text {
     text-align: center;
     letter-spacing: 3px;
@@ -78,8 +88,7 @@ br.responsive {
   }
   &__left {
     background-image: url("image02.jpg");
-    background-position: center;
-    background-size: cover;
+    @include backGround();
     height: 300px;
     width: 300px;
   }
@@ -91,14 +100,14 @@ br.responsive {
       padding-bottom: 1rem;
     }
     .sns {
-      font-size: 2rem;
+      font-size: $fontL;
       padding-bottom: 0.5rem;
       a.qiita {
         color: #55c500;
         margin: 0 1rem;
       }
       a.twitter {
-        color: #1da1f2;
+        color: $twitterColor;
       }
       a:hover {
         opacity: 0.8;
@@ -111,12 +120,11 @@ br.responsive {
 }
 
 .container-skill {
-  height: 600px;
-  padding: 2rem 3rem;
-  background-image: url("image03.jpg");
-  background-position: center;
-  background-size: cover;
+  height: $containerHeight;
+  @include backGround();
   background-attachment: fixed;
+  background-image: url("image03.jpg");
+  padding: 2rem 3rem;
   color: #fff;
   p {
     text-align: center;
@@ -139,10 +147,10 @@ br.responsive {
         padding: 1rem 0;
       }
       p.top.middle {
-        font-size: 1.5rem;
+        font-size: $fontM;
       }
       p.small {
-        font-size: 0.875rem;
+        font-size: $fontS;
         line-height: 25px;
         text-align: left;
       }
@@ -159,7 +167,7 @@ br.responsive {
         }
         a.color {
           color: #75a9ff;
-          font-size: 0.875rem;
+          font-size: $fontM;
           margin: 0 -0.3rem;
         }
       }
@@ -208,7 +216,7 @@ br.responsive {
       width: 50%;
       padding: 2rem;
       p.middle {
-        font-size: 1.5rem;
+        font-size: $fontM;
         text-align: left;
         border-bottom: 1px solid #ddd;
         padding-bottom: 0.5rem;
@@ -229,9 +237,8 @@ br.responsive {
       width: 75%;
       border: 1px solid #ddd;
       border-radius: 5px;
-      background-size: cover;
+      @include backGround();
       background-repeat: no-repeat;
-      background-position: center;
       position: relative;
     }
     a.small {
@@ -307,11 +314,10 @@ br.responsive {
 }
 
 .container-contact {
-  height: 600px;
+  height: 650px;
+  @include backGround();
   padding: 2rem 3rem;
   background-image: url("image04.jpg");
-  background-position: center;
-  background-size: cover;
   background-attachment: fixed;
   text-align: center;
   color: #000;
@@ -319,15 +325,13 @@ br.responsive {
     margin-left: -0.3rem;
   }
   .form {
-    display: flex;
+    @include flexBoxCenter();
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
     width: 100%;
     input,
     textarea {
-      font-size: 0.875rem;
+      font-size: $fontM;
       width: 25%;
       padding: 0.5rem 1rem;
       border: none;
@@ -411,7 +415,7 @@ div.scroll {
     .toggle-switch {
       margin: 1rem 0;
       p {
-        font-size: 1.5rem;
+        font-size: $fontM;
         padding-right: 1.5rem;
       }
     }
@@ -443,7 +447,7 @@ div.scroll {
           display: flex;
           flex-direction: column;
           a.smoothScroll {
-            font-size: 2rem;
+            font-size: $fontL;
             margin: 1rem 0;
           }
         }
@@ -464,7 +468,7 @@ div.scroll {
         padding: 1rem 0;
       }
       p {
-        font-size: 2rem;
+        font-size: $fontL;
       }
     }
   }
@@ -490,7 +494,7 @@ div.scroll {
     }
     &__right:not(.responsive) {
       text-align: center;
-      font-size: 2rem;
+      font-size: $fontL;
       padding: 3rem 0;
       line-height: 55px;
       p.bottom {
@@ -552,11 +556,11 @@ div.scroll {
             margin: 3rem auto;
           }
           p.small {
-            font-size: 1.5rem;
+            font-size: $fontM;
             line-height: 45px;
           }
           a.color {
-            font-size: 1.5rem;
+            font-size: $fontM;
           }
         }
       }
@@ -566,21 +570,21 @@ div.scroll {
   .container-works {
     .delay {
       p.bottom {
-        font-size: 2rem;
+        font-size: $fontM;
         padding: 0 2rem;
       }
     }
     .work {
       flex-direction: column;
       p.middle {
-        font-size: 2rem;
+        font-size: $fontL;
         padding-bottom: 1rem;
         margin-bottom: 1.5rem;
         border-bottom: 1px solid #aaa;
         text-align: initial;
       }
       p {
-        font-size: 1.5rem;
+        font-size: fontM;
       }
       p.inline {
         display: inline;
@@ -624,7 +628,7 @@ div.scroll {
           margin: 0 1rem -4rem;
         }
         h4.small {
-          font-size: 1.5rem;
+          font-size: $fontM;
           margin-bottom: -4rem;
         }
         h4.small.etc {
@@ -684,14 +688,14 @@ div.scroll {
     }
     a.color,
     p.inline {
-      font-size: 1.5rem;
+      font-size: $fontM;
     }
     .form {
       input,
       textarea {
         width: 100%;
         padding: 1rem 2rem;
-        font-size: 1.5rem;
+        font-size: $fontM;
         margin-top: 2rem;
       }
       input,
@@ -704,7 +708,7 @@ div.scroll {
         margin-bottom: 3rem;
       }
       button {
-        font-size: 2rem;
+        font-size: $fontL;
         padding: 1rem 2rem;
       }
     }
@@ -717,7 +721,7 @@ div.scroll {
       letter-spacing: 2px;
       padding: 2rem 0 1rem;
       &::before {
-        font-size: 2rem;
+        font-size: $fontL;
         vertical-align: sub;
       }
     }
