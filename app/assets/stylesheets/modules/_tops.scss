@@ -1,18 +1,21 @@
 $containerHeight: 600px;
+$kushiroCityColor: #ff6928;
 
-@mixin backGround {
+@mixin backGround($image, $attachment: fixed) {
+  background-image: url($image);
   background-size: cover;
   background-position: center;
+  background-attachment: $attachment;
 }
 
-@mixin flexBoxCenter {
+@mixin flexBoxCenter($side: center, $vertical: center) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $side;
+  align-items: $vertical;
 }
 
 .header-line {
-  border: 3px solid #ff6928;
+  border: 3px solid $kushiroCityColor;
   border-radius: 2px;
   width: 10%;
   margin: 1rem 0 1.5rem 0;
@@ -39,9 +42,7 @@ br.responsive {
 }
 
 .header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include flexBoxCenter(flex-end);
   position: fixed;
   width: 100%;
   padding: 0 10rem;
@@ -63,11 +64,9 @@ br.responsive {
 }
 
 .container-top {
+  @include backGround($image: "image01.jpeg");
+  @include flexBoxCenter;
   height: $containerHeight;
-  @include backGround();
-  background-attachment: fixed;
-  background-image: url("image01.jpeg");
-  @include flexBoxCenter();
   &__text {
     text-align: center;
     letter-spacing: 3px;
@@ -79,22 +78,20 @@ br.responsive {
 }
 
 .container-profile {
-  display: flex;
-  justify-content: space-around;
+  @include flexBoxCenter($side: space-around, $vertical: initial);
   padding: 4rem 10rem;
   &__left,
   &__right {
     margin: 0 auto;
   }
   &__left {
-    background-image: url("image02.jpg");
-    @include backGround();
+    @include backGround($image: "image02.jpg", $attachment: initial);
     height: 300px;
     width: 300px;
   }
   &__right {
     span {
-      color: #ff6928;
+      color: $kushiroCityColor;
     }
     p.bottom {
       padding-bottom: 1rem;
@@ -120,10 +117,8 @@ br.responsive {
 }
 
 .container-skill {
+  @include backGround($image: "image03.jpg");
   height: $containerHeight;
-  @include backGround();
-  background-attachment: fixed;
-  background-image: url("image03.jpg");
   padding: 2rem 3rem;
   color: #fff;
   p {
@@ -237,7 +232,8 @@ br.responsive {
       width: 75%;
       border: 1px solid #ddd;
       border-radius: 5px;
-      @include backGround();
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
       position: relative;
     }
@@ -315,17 +311,15 @@ br.responsive {
 
 .container-contact {
   height: 650px;
-  @include backGround();
+  @include backGround($image: "image04.jpg");
   padding: 2rem 3rem;
-  background-image: url("image04.jpg");
-  background-attachment: fixed;
   text-align: center;
   color: #000;
   p.inline {
     margin-left: -0.3rem;
   }
   .form {
-    @include flexBoxCenter();
+    @include flexBoxCenter;
     flex-direction: column;
     padding: 1rem;
     width: 100%;
