@@ -25,6 +25,12 @@
 
 // コンテンツをスクロールするとふわっと出てくる
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
 .animationTarget.show .delay,
 .animationTarget.show .header-line.middle,
 .animationTarget.show .language__block,
@@ -44,26 +50,12 @@
 }
 
 .language__block {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.language__block.delay1 {
-  transition: 1s;
-}
-
-.language__block.delay2 {
-  transition: 1.2s;
-}
-
-.language__block.delay3 {
-  transition: 1.4s;
-}
-
-.language__block.delay4 {
-  transition: 1.6s;
-}
-.language__block.delay5 {
-  transition: 1.8s;
+  animation: fadeIn 1s backwards;
+  @for $i from 1 through 6 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: 1s * $i;
+    }
+  }
 }
 
 .picture,
