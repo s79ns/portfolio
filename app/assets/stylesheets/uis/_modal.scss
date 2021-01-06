@@ -1,30 +1,28 @@
-.modal {
+@mixin modal($Top, $Left, $zIndex) {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 11;
+  top: $Top;
+  left: $Left;
+  z-index: $zIndex;
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
 }
 
-.modal.active {
-  opacity: 1;
+@mixin modalActive($opacity) {
+  opacity: $opacity;
   visibility: visible;
 }
 
+.modal {
+  @include modal($Top: 50%, $Left: 50%, $zIndex: 11);
+  transform: translate(-50%, -50%);
+}
+
 .modalmask {
-  position: fixed;
-  top: 0;
-  left: 0;
+  @include modal($Top: 0, $Left: 0, $zIndex: 10);
   height: 100%;
   width: 100%;
   background-color: #000;
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
   a.modalClose {
     position: absolute;
     top: 0%;
@@ -40,7 +38,10 @@
   }
 }
 
+.modal.active {
+  @include modalActive(1);
+}
+
 .modalmask.active {
-  opacity: 0.7;
-  visibility: visible;
+  @include modalActive(0.7);
 }
