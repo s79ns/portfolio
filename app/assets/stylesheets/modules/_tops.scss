@@ -99,9 +99,14 @@ br.responsive {
     .sns {
       font-size: $fontL;
       padding-bottom: 0.5rem;
+      display: flex;
       a.qiita {
-        color: #55c500;
-        margin: 0 1rem;
+        @include backGround($image: "qiita.png", $attachment: initial);
+        display: block;
+        height: 30px;
+        width: 30px;
+        margin: .6rem 1rem;
+        border-radius: 3px;
       }
       a.twitter {
         color: $twitterColor;
@@ -498,8 +503,16 @@ div.scroll {
         padding: 2rem 0;
       }
       .sns {
-        font-size: 3rem;
+        font-size: 4rem;
         padding-bottom: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        a.qiita {
+          height: 60px;
+          width: 60px;
+          margin: .3rem 2rem;
+          border-radius: 10px;
+        }
       }
       p.top,
       .header-line {
