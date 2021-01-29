@@ -11,6 +11,7 @@
 @mixin modalActive($opacity) {
   opacity: $opacity;
   visibility: visible;
+  height: -webkit-fill-available;
 }
 
 .modal {

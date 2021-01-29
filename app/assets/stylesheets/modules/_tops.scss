@@ -14,13 +14,13 @@ $kushiroCityColor: #ff6928;
   align-items: $vertical;
 }
 
-.header-line {
+.headerLine {
   border: 3px solid $kushiroCityColor;
   border-radius: 2px;
   width: 10%;
   margin: 1rem 0 1.5rem 0;
 }
-.header-line.middle {
+.headerLine.middle {
   width: 3%;
   margin: 1rem auto 1.5rem;
 }
@@ -41,7 +41,7 @@ br.responsive {
   display: none;
 }
 
-.header {
+header {
   @include flexBoxCenter(flex-end);
   position: fixed;
   width: 100%;
@@ -63,7 +63,7 @@ br.responsive {
   display: none;
 }
 
-.container-top {
+.containerTop {
   @include backGround($image: "image01.jpeg");
   @include flexBoxCenter;
   height: $containerHeight;
@@ -77,7 +77,7 @@ br.responsive {
   }
 }
 
-.container-profile {
+.containerProfile {
   @include flexBoxCenter($side: space-around, $vertical: initial);
   padding: 4rem 10rem;
   &__left,
@@ -121,7 +121,7 @@ br.responsive {
   }
 }
 
-.container-skill {
+.containerSkill {
   @include backGround($image: "image03.jpg");
   height: $containerHeight;
   padding: 2rem 3rem;
@@ -154,13 +154,13 @@ br.responsive {
         line-height: 25px;
         text-align: left;
       }
-      p.paddingtop {
+      p.paddingTop {
         padding: 1rem 0 0;
       }
-      p.paddingcut {
+      p.paddingCut {
         padding: initial;
       }
-      .paddingbottom {
+      .paddingBottom {
         padding-bottom: 1rem;
         p.inline {
           display: inline;
@@ -201,7 +201,7 @@ br.responsive {
   }
 }
 
-.container-works {
+.containerWorks {
   padding: 3rem;
   p {
     text-align: center;
@@ -291,7 +291,7 @@ br.responsive {
         padding: 0.2rem 0;
         margin: 1rem 0 -5rem;
       }
-      h4.etctext {
+      h4.etcText {
         font-size: 1rem;
         padding: 6rem 1rem 0 0;
       }
@@ -314,7 +314,7 @@ br.responsive {
   }
 }
 
-.container-contact {
+.containerContact {
   height: 650px;
   @include backGround($image: "image04.jpg");
   padding: 2rem 3rem;
@@ -358,7 +358,7 @@ br.responsive {
   }
 }
 
-.footer {
+footer {
   text-align: center;
   p {
     font-size: 0.5rem;
@@ -388,7 +388,7 @@ div.scroll {
   transition: 1.5s;
 }
 
-.container-contact {
+.containerContact {
   opacity: 0;
   transform: translateY(50px);
   transition: 1s;
@@ -405,10 +405,10 @@ div.scroll {
     width: 100vh;
   }
 
-  .header > a.smoothScroll {
+  header > a.smoothScroll {
     display: none;
   }
-  .header {
+  header {
     padding: 1rem 3rem;
     justify-content: initial;
     .toggle-switch {
@@ -454,7 +454,7 @@ div.scroll {
     }
   }
 
-  .container-top {
+  .containerTop {
     height: 700px;
     background-position: top;
     &__text {
@@ -472,7 +472,7 @@ div.scroll {
     }
   }
 
-  .container-profile {
+  .containerProfile {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -481,7 +481,7 @@ div.scroll {
       p.top {
         font-size: 3rem;
       }
-      .header-line {
+      .headerLine {
         width: 20%;
         margin: 2rem auto 3rem;
       }
@@ -515,7 +515,7 @@ div.scroll {
         }
       }
       p.top,
-      .header-line {
+      .headerLine {
         display: none;
       }
       br.responsive {
@@ -523,7 +523,7 @@ div.scroll {
       }
     }
   }
-  .header-line.middle {
+  .headerLine.middle {
     width: 10%;
     margin: 2rem auto 3rem;
   }
@@ -542,7 +542,7 @@ div.scroll {
     margin-top: 1500px;
   }
 
-  .container-skill {
+  .containerSkill {
     height: auto;
     .delay {
       p.bottom {
@@ -574,7 +574,7 @@ div.scroll {
     }
   }
 
-  .container-works {
+  .containerWorks {
     .delay {
       p.bottom {
         font-size: $fontM;
@@ -643,7 +643,7 @@ div.scroll {
           padding: 0.2rem 0;
           margin: 3rem 1rem -5rem;
         }
-        h4.etctext {
+        h4.etcText {
           font-size: 1.75rem;
           padding: 6rem 1rem 0 0;
           margin: 0 1rem;
@@ -687,7 +687,7 @@ div.scroll {
     }
   }
 
-  .container-contact {
+  .containerContact {
     height: auto;
     background-position: right;
     p.top {
@@ -721,7 +721,7 @@ div.scroll {
     }
   }
 
-  .footer {
+  footer {
     margin-bottom: 70px;
     p {
       font-size: 1.25rem;
